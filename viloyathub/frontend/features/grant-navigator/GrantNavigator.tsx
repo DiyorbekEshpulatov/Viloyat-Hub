@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 // import { useQuery } from '@tanstack/react-query'; // You will need to set up @tanstack/react-query
-import { GrantCard } from '../components/GrantCard';
-import { FilterBar } from '../components/FilterBar';
-import { LoadingSkeleton } from '../components/LoadingSkeleton';
-import { ErrorMessage } from '../components/ErrorMessage';
+import { GrantCard } from '../../components/GrantCard';
+import { FilterBar } from '../../components/FilterBar';
+import { LoadingSkeleton } from '../../components/LoadingSkeleton';
+import { ErrorMessage } from '../../components/ErrorMessage';
 import { api } from '../../lib/api';
 
 interface Grant {
@@ -19,7 +19,7 @@ interface Grant {
 
 // Mock hook since we don't have react-query installed yet
 const useQuery = (options: any) => {
-    const [data, setData] = React.useState(null);
+    const [data, setData] = React.useState<any>(null);
     const [isLoading, setIsLoading] = React.useState(true);
     const [error, setError] = React.useState(null);
 
@@ -59,13 +59,13 @@ export const GrantNavigator: React.FC = () => {
     <div className="grant-navigator">
       <FilterBar filters={filters} onFilterChange={setFilters} />
 
-      {matchedGrants && (matchedGrants as any).length > 0 && (
+      {matchedGrants && matchedGrants.length > 0 && (
         <section className="matched-grants">
           <h2 className="text-xl font-bold mb-4">
             🎯 Sizga mos grantlar
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {(matchedGrants as any).map((grant: Grant) => (
+            {matchedGrants.map((grant: Grant) => (
               <GrantCard key={grant.id} grant={grant} highlighted />
             ))}
           </div>
@@ -77,7 +77,7 @@ export const GrantNavigator: React.FC = () => {
           📋 Barcha grantlar
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {grants?.map((grant: Grant) => (
+          {grants && grants.map((grant: Grant) => (
             <GrantCard key={grant.id} grant={grant} />
           ))}
         </div>

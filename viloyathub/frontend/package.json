@@ -1,0 +1,20 @@
+{
+  "name": "viloyathub-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@tanstack/react-query": "^5.28.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "dev": "echo \"Frontend dev server not set up yet. Use a tool like Vite or Next.js.\"",
+    "build": "echo \"Frontend build process not set up yet.\"",
+    "lint": "tsc --noEmit"
+  }
+}

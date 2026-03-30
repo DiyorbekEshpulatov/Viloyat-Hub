@@ -1,3 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 source .venv/bin/activate
-python -u -m flask --app main run -p $PORT --debug
+export FLASK_APP=run.py
+export FLASK_ENV=development
+flask run -h 0.0.0.0 -p 8080

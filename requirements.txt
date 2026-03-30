@@ -1,5 +1,1 @@
-fastapi
-uvicorn
-slowapi
-python-dotenv
-gunicorn
+Flask
