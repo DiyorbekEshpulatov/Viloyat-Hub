@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 218 14% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 218 14% 13%;
+    --primary: 208 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 218 14% 13%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 218 14% 88%;
+    --muted-foreground: 218 14% 45%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 218 14% 13%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 218 14% 90%;
+    --input: 218 14% 95%;
+    --ring: 208 100% 50%;
+    --radius: 0.5rem;
+    --font-sans: system-ui, -apple-system, sans-serif;
+  }
+
+  .dark {
+    --background: 218 14% 12%;
+    --foreground: 0 0% 98%;
+    --card: 218 14% 18%;
+    --card-foreground: 0 0% 98%;
+    --primary: 208 100% 50%;
+    --primary-foreground: 218 14% 13%;
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 218 14% 13%;
+    --muted: 218 14% 30%;
+    --muted-foreground: 218 14% 65%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 218 14% 13%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 218 14% 25%;
+    --input: 218 14% 20%;
+    --ring: 208 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  @apply bg-background;
+}
+
+/* Leaflet styles */
+@import "leaflet/dist/leaflet.css";

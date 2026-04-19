@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "grants": "Grantlar",
+    "mentor": "AI Mentor",
+    "marketplace": "Bozor",
+    "mentorship": "Mentorlik",
+    "dashboard": "Boshqaruv",
+    "login": "Kirish",
+    "signup": "Ro'yxatdan o'tish",
+    "logout": "Chiqish",
+    "profile": "Profil"
+  },
+  "home": {
+    "title": "O'zingizning Tadbirkorlik Sayohatini Rivojlantiring",
+    "subtitle": "O'zbekistonning barcha viloyatlari bo'ylab grantlar, AI mentorlik va bozor imkoniyatlariga ega bo'ling",
+    "cta": "Boshlang'ich",
+    "features": {
+      "grants": "Grant Navigator",
+      "grantsDesc": "O'zingizning biznesiga mos kelgan grantlarni toping va arizani topshiring",
+      "mentor": "AI Mentor",
+      "mentorDesc": "Sun'iy intellekt bilan ta'minlangan mentor bilan maslahat oling",
+      "marketplace": "Bozor",
+      "marketplaceDesc": "Xaridorlari va ta'minot qiluvchilar bilan bog'lanish",
+      "mentorship": "Mentorlik dasturi",
+      "mentorshipDesc": "Tajribali tadbirkorlardan bilib oling"
+    }
+  },
+  "grants": {
+    "title": "Grant Navigator",
+    "description": "Kategoriya va viloyat bo'ylab grantlarni qidiring va ariza topshiring",
+    "search": "Grantlarni qidiring...",
+    "filter": "Saralash",
+    "apply": "Hozir Ariza Topshirish",
+    "details": "Grant Tafsilotlari",
+    "region": "Viloyat",
+    "amount": "Summa",
+    "deadline": "Muddati",
+    "status": "Holati"
+  },
+  "mentor": {
+    "title": "AI Mentor",
+    "description": "Biznesiy maslahat olish uchun AI mentor bilan suhbatlashing",
+    "message": "Savol bering...",
+    "send": "Yuborish"
+  },
+  "marketplace": {
+    "title": "Bozor",
+    "description": "Mahsulot va xizmatlarni sotib oling va sotin",
+    "myListings": "Mening E'lonlarim",
+    "newListing": "Yangi E'lon Yaratish",
+    "category": "Kategoriya",
+    "price": "Narx",
+    "contact": "Sotuvchiga Murojaat Qilish"
+  },
+  "mentorship": {
+    "title": "Mentorlik dasturi",
+    "description": "Tajribali mentorlar bilan bog'lanish",
+    "findMentor": "Mentor Toping",
+    "becomeMentor": "Mentor Bo'ling",
+    "schedule": "Seans Belgilash"
+  },
+  "auth": {
+    "email": "Elektron pochta",
+    "password": "Parol",
+    "confirmPassword": "Parolni Tasdiqlang",
+    "firstName": "Ism",
+    "lastName": "Familiya",
+    "businessName": "Biznes nomi",
+    "signupSuccess": "Hisob muvaffaqiyatli yaratildi!",
+    "loginSuccess": "Muvaffaqiyatli kirildi!",
+    "error": "Xatolik yuz berdi. Iltimos, yana urinib ko'ring.",
+    "invalidCredentials": "Elektron pochta yoki parol noto'g'ri"
+  },
+  "common": {
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik",
+    "success": "Muvaffaqiyat",
+    "cancel": "Bekor qilish",
+    "submit": "Yuborish",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash",
+    "save": "Saqlash",
+    "language": "Til"
+  }
+}
