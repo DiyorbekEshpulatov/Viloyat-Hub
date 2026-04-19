@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useState } from "react";
 import {
   Zap,
   Gift,
@@ -11,7 +10,6 @@ import {
   Brain,
   ArrowRight,
   CheckCircle,
-  X,
   Cpu,
   Smartphone,
   Cloud,
@@ -20,7 +18,6 @@ import {
 
 export default function HomePage() {
   const t = useTranslations();
-  const [showLoginModal, setShowLoginModal] = useState(false);
 
   const features = [
     {
@@ -69,49 +66,27 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Robot-Style Header with Modal Trigger */}
-      <section className="relative px-4 py-12 bg-gradient-to-b from-primary/10 to-transparent border-b-2 border-primary/20 cursor-pointer hover:from-primary/15 transition-colors" onClick={() => setShowLoginModal(true)}>
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="text-4xl">🤖</div>
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">VILOYAT-HUB</h2>
-              <p className="text-sm text-primary font-semibold uppercase tracking-wider">Uzbekistan Entrepreneurship Platform v1.0</p>
+      {/* Robot-Style Header - Links to Login */}
+      <Link href="/login">
+        <section className="relative px-4 py-12 bg-gradient-to-b from-primary/10 to-transparent border-b-2 border-primary/20 cursor-pointer hover:from-primary/15 transition-colors">
+          <div className="max-w-6xl mx-auto flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="text-4xl">🤖</div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">VILOYAT-HUB</h2>
+                <p className="text-sm text-primary font-semibold uppercase tracking-wider">Uzbekistan Entrepreneurship Platform v1.0</p>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center gap-2 text-primary animate-pulse">
+              <div className="w-3 h-3 bg-primary rounded-full"></div>
+              <span className="text-sm font-semibold">SYSTEM READY</span>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-2 text-primary animate-pulse">
-            <div className="w-3 h-3 bg-primary rounded-full"></div>
-            <span className="text-sm font-semibold">SYSTEM READY</span>
+          <div className="absolute inset-0 opacity-5 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
           </div>
-        </div>
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-        </div>
-      </section>
-
-      {/* Login Modal */}
-      {showLoginModal && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-card rounded-lg shadow-2xl max-w-md w-full border-2 border-primary/30">
-            <div className="flex items-center justify-between p-6 border-b border-border">
-              <h3 className="text-xl font-bold text-foreground">SYSTEM LOGIN</h3>
-              <button onClick={() => setShowLoginModal(false)} className="text-muted-foreground hover:text-foreground">
-                <X size={24} />
-              </button>
-            </div>
-            <div className="p-6 space-y-4">
-              <input type="email" placeholder={t("auth.email")} className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:border-primary" />
-              <input type="password" placeholder={t("auth.password")} className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:border-primary" />
-              <Link href="/login" className="block w-full px-4 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-center">
-                {t("nav.login")}
-              </Link>
-              <Link href="/signup" className="block w-full px-4 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-colors text-center">
-                {t("nav.signup")}
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
+        </section>
+      </Link>
 
       {/* Hero Section */}
       <section className="px-4 py-20 md:py-32">
