@@ -5,12 +5,8 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     unoptimized: true,
-  },
-  experimental: {
-    cacheComponents: true,
   },
 };
 
