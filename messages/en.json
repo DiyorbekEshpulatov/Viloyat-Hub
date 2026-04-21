@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Home",
+    "grants": "Grants",
+    "mentor": "AI Mentor",
+    "marketplace": "Marketplace",
+    "mentorship": "Mentorship",
+    "dashboard": "Dashboard",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "home": {
+    "title": "Empower Your Entrepreneurial Journey",
+    "subtitle": "Access grants, AI mentorship, and marketplace opportunities across Uzbekistan",
+    "cta": "Get Started",
+    "nanoTech": "Nano Technologies",
+    "features": {
+      "grants": "Grant Navigator",
+      "grantsDesc": "Find and apply for grants tailored to your business",
+      "mentor": "AI Mentor",
+      "mentorDesc": "Get guidance from an AI-powered mentor",
+      "marketplace": "Marketplace",
+      "marketplaceDesc": "Connect with buyers and suppliers",
+      "mentorship": "Mentorship Program",
+      "mentorshipDesc": "Learn from experienced entrepreneurs"
+    }
+  },
+  "grants": {
+    "title": "Grant Navigator",
+    "description": "Search and apply for grants by category and region",
+    "search": "Search grants...",
+    "filter": "Filter",
+    "apply": "Apply Now",
+    "details": "Grant Details",
+    "region": "Region",
+    "amount": "Amount",
+    "deadline": "Deadline",
+    "status": "Status"
+  },
+  "mentor": {
+    "title": "AI Mentor",
+    "description": "Chat with our AI mentor for business guidance",
+    "message": "Ask a question...",
+    "send": "Send"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "description": "Buy and sell products and services",
+    "myListings": "My Listings",
+    "newListing": "Create New Listing",
+    "category": "Category",
+    "price": "Price",
+    "contact": "Contact Seller"
+  },
+  "mentorship": {
+    "title": "Mentorship Program",
+    "description": "Connect with experienced mentors",
+    "findMentor": "Find a Mentor",
+    "becomeMentor": "Become a Mentor",
+    "schedule": "Schedule Session"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "businessName": "Business Name",
+    "signupSuccess": "Account created successfully!",
+    "loginSuccess": "Logged in successfully!",
+    "error": "An error occurred. Please try again.",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "delete": "Delete",
+    "edit": "Edit",
+    "save": "Save",
+    "language": "Language"
+  }
+}
