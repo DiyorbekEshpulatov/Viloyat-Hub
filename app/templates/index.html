@@ -1,6 +1,142 @@
-from app import create_app
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViloyatHub – Hududiy Innovatsion Ekotizim</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #111827; }
 
-app = create_app()
+        /* NAV */
+        nav { background: white; border-bottom: 1px solid #e5e7eb; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-logo { font-size: 1.5rem; font-weight: 700; color: #16a34a; text-decoration: none; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: #374151; font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: #16a34a; }
+        .nav-btn { background: #16a34a; color: white; padding: .5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background .2s; }
+        .nav-btn:hover { background: #15803d; }
 
-if __name__ == '__main__':
-    app.run(debug=True)
+        /* HERO */
+        .hero { min-height: 90vh; background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 1rem; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.5rem; }
+        .hero h1 span { color: #16a34a; }
+        .hero p { font-size: 1.25rem; color: #4b5563; max-width: 640px; margin: 0 auto 2.5rem; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: #16a34a; color: white; padding: .875rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.05rem; transition: transform .15s, background .2s; }
+        .btn-primary:hover { background: #15803d; transform: translateY(-2px); }
+        .btn-outline { border: 2px solid #16a34a; color: #16a34a; padding: .875rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.05rem; transition: all .15s; }
+        .btn-outline:hover { background: #f0fdf4; transform: translateY(-2px); }
+
+        /* STATS */
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 600px; margin: 4rem auto 0; }
+        @media(min-width:640px){ .stats-grid { grid-template-columns: repeat(4, 1fr); max-width: 800px; } }
+        .stat-card { text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: 800; color: #16a34a; }
+        .stat-label { color: #6b7280; font-size: .95rem; margin-top: .25rem; }
+
+        /* FEATURES */
+        .features { padding: 5rem 1rem; background: #f9fafb; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem; }
+        .section-title p { color: #6b7280; font-size: 1.1rem; max-width: 520px; margin: 0 auto; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .feature-card { background: white; border-radius: 16px; padding: 2rem; border: 1px solid #e5e7eb; transition: box-shadow .2s, transform .2s; }
+        .feature-card:hover { box-shadow: 0 8px 32px rgba(22,163,74,.12); transform: translateY(-4px); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .feature-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .5rem; }
+        .feature-card p { color: #6b7280; line-height: 1.6; }
+
+        /* CTA */
+        .cta { background: linear-gradient(135deg, #16a34a, #15803d); color: white; padding: 5rem 1rem; text-align: center; }
+        .cta h2 { font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem; }
+        .cta p { font-size: 1.15rem; opacity: .9; margin-bottom: 2.5rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+        .btn-white { background: white; color: #16a34a; padding: .875rem 2.25rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.05rem; transition: transform .15s; }
+        .btn-white:hover { transform: translateY(-2px); }
+
+        /* FOOTER */
+        footer { background: #111827; color: #9ca3af; padding: 2rem 1rem; text-align: center; }
+        footer p { margin: .25rem 0; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-logo">🌿 ViloyatHub</a>
+    <ul class="nav-links">
+        <li><a href="/grants">Grantlar</a></li>
+        <li><a href="/mentor">AI Mentor</a></li>
+        <li><a href="/map">Xarita</a></li>
+    </ul>
+    <a href="/register" class="nav-btn">Boshlash →</a>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>ViloyatHub<br><span>– Hududiy Innovatsion Ekotizim</span></h1>
+        <p>Toshkentdan tashqari 12 million aholiga tadbirkorlik imkoniyatini yaratamiz</p>
+        <div class="hero-btns">
+            <a href="/register" class="btn-primary">Boshlash</a>
+            <a href="/grants" class="btn-outline">Grantlarni ko'rish</a>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-number">350K+</div><div class="stat-label">Biznes</div></div>
+            <div class="stat-card"><div class="stat-number">12</div><div class="stat-label">Viloyat</div></div>
+            <div class="stat-card"><div class="stat-number">$50M+</div><div class="stat-label">GDP o'sishi</div></div>
+            <div class="stat-card"><div class="stat-number">20K+</div><div class="stat-label">Yangi ish o'rni</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="section-title">
+        <h2>Platforma Imkoniyatlari</h2>
+        <p>ViloyatHub sizga kerakli barcha vositalarni bir joyda taqdim etadi</p>
+    </div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3>Grant Navigator</h3>
+            <p>AI yordamida sizga mos grantlarni avtomatik toping va ariza topshiring</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AI Mentor</h3>
+            <p>24/7 rejimda tadbirkorlik savollariga javob – istalgan vaqt, istalgan joydan</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>Hududiy Xarita</h3>
+            <p>Viloyatingizdagi resurslar va imkoniyatlarni interaktiv xaritada ko'ring</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🛒</div>
+            <h3>Onlayn Bozor</h3>
+            <p>Mahalliy mahsulotlarni butun O'zbekiston bo'ylab sotish platformasi</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Mentorlik</h3>
+            <p>Toshkent va xorijiy ekspertlar bilan bevosita bog'lanish imkoniyati</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Moliyalashtirish</h3>
+            <p>Mikrokredit, grant va investorlar bilan aloqa bir platformada</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Bugun boshlang!</h2>
+    <p>O'zbekistonning har bir burchagida tadbirkorlik rivoj topsin</p>
+    <a href="/register" class="btn-white">Bepul ro'yxatdan o'tish</a>
+</section>
+
+<footer>
+    <p>© 2024 ViloyatHub. Barcha huquqlar himoyalangan.</p>
+    <p>O'zbekiston bo'yicha hududiy innovatsion ekotizim</p>
+</footer>
+
+</body>
+</html>
