@@ -24,13 +24,9 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="bg-background">
-      <body className="bg-background text-foreground">
-        <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main className="min-h-screen bg-background">{children}</main>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <Navbar />
+      <main className="min-h-screen bg-background">{children}</main>
+    </NextIntlClientProvider>
   );
 }
